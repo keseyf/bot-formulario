@@ -1,6 +1,6 @@
 # 🤖 BOT PREENCHIMENTO DE FORMULÁRIO
 
-Este projeto automatiza o preenchimento de formulários de cadastro no site [Agendor](https://beta.agendor.com.br/people/new), utilizando Selenium e uma interface simples em terminal. Ideal para agilizar cadastros em massa com feedback visual usando `colorama`.
+Este projeto automatiza o preenchimento de formulários de cadastro no site [Agendor](https://beta.agendor.com.br/), utilizando Selenium e uma interface simples em terminal. Ideal para agilizar cadastros em massa com feedback visual usando `colorama`.
 
 ---
 
@@ -38,16 +38,24 @@ Este projeto automatiza o preenchimento de formulários de cadastro no site [Age
 - Baixe o ChromeDriver compatível com a sua versão do Chrome e adicione-o ao seu PATH.
 
 3. **Execute o script:**
-- python botformulario.py
+- `python botformulario.py`
 
 ## Utilizando o bot:
 #### Ao iniciar o bot será pedido login e senha para acessar o site, e devera ser passado desta maneira:
 `email@example.com` e `senha`  
 
 #### Após deverá ser colado as informações dos usuários, cada campo de informação do usuário é separado por vírgula "," e cada usuario é separado por ";".
+
+### Exemplo de como os dados devem ser passados:
+
+`Nome, Cpf, Cnpj, Razão_social, Data_nascimento (DD/MM), Ano_nasc (YYYY), Email, Cep, Número, Complemento;`
+
+
 ⚠️ Avisos
 Verifique se todos os 10 campos estão preenchidos para cada usuário.
 
-O botão de envio do formulário é acionado via tecla ENTER (não possui id ou name).
+A função de envio do formulário é **NÃO** foi adicionado, e é de **EXCLUSIVA** obrigatoriedade do cliente. Caso o formulario não tenha sido enviado antes de iniciar o preenchimento do próximo cliente, o anterior não será submetido.
 
-Após cada envio, o script aguarda uma confirmação no terminal para prosseguir.
+Após cada preenchimento, o script irá aguardar uma confirmação no terminal para prosseguir, Que deve ser feita apertando  **ENTER**.
+
+*quaiser dúvida contatar o programador.*
